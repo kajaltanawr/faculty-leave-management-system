@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Take Attendance</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#f5f5f5;
+    }
+
+    /* Navbar */
+    .navbar{
+        background:#3f4d63;
+        color:white;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 30px;
+    }
+
+    .logo-section{
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+
+    .logo{
+        width:40px;
+        height:40px;
+        background:#27c3a5;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:20px;
+    }
+
+    .title h2{
+        font-size:18px;
+    }
+
+    .title p{
+        font-size:12px;
+        color:#8cff8c;
+    }
+
+    .nav-links{
+        display:flex;
+        gap:20px;
+        align-items:center;
+    }
+
+    .nav-links a{
+        color:white;
+        text-decoration:none;
+        font-size:14px;
+    }
+
+    .logout-btn{
+        background:white;
+        color:#3f4d63;
+        padding:6px 12px;
+        border:none;
+        border-radius:4px;
+        cursor:pointer;
+    }
+
+    /* Main */
+    .container{
+        width:80%;
+        margin:40px auto;
+    }
+
+    h1, h2{
+        text-align:center;
+        margin-bottom:25px;
+        color:#333;
+    }
+
+    /* Subject Selection */
+    .subject-row{
+        display:flex;
+        gap:20px;
+        margin-bottom:60px;
+    }
+
+    .subject-box{
+        flex:1;
+    }
+
+    .subject-box label{
+        display:block;
+        margin-bottom:8px;
+        font-weight:bold;
+        font-size:14px;
+    }
+
+    .subject-box input{
+        width:100%;
+        padding:10px;
+        border:1px solid #ddd;
+        border-radius:4px;
+        background:white;
+    }
+
+    /* Attendance Table */
+    table{
+        width:100%;
+        border-collapse:collapse;
+        margin-top:20px;
+        background:white;
+    }
+
+    table td{
+        padding:12px;
+        border-bottom:1px solid #ddd;
+        font-size:14px;
+    }
+
+    .center{
+        text-align:center;
+    }
+
+    /* Button */
+    .btn-container{
+        text-align:center;
+        margin-top:30px;
+    }
+
+    .btn{
+        background:#4c8bf5;
+        color:white;
+        border:none;
+        padding:12px 25px;
+        border-radius:20px;
+        cursor:pointer;
+        font-size:15px;
+    }
+
+    .btn:hover{
+        background:#357ae8;
+    }
+
+    /* Footer */
+    .footer{
+        position:fixed;
+        bottom:0;
+        width:100%;
+        background:#f1f1f1;
+        padding:10px 20px;
+        font-size:14px;
+        color:#444;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo-section">
+        <div class="logo">📘</div>
+        <div class="title">
+            <h2>Faculty Attendance Management System</h2>
+            <p>Shree Dadaji Institute Of Technology & Science</p>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="#">Take Attendance</a>
+        <a href="#">View Attendance</a>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<!-- Main Container -->
+<div class="container">
+
+    <h1>Select department</h1>
+
+    <div class="subject-row">
+        <div class="subject-box">
+            <label>Course</label>
+            <input type="text" value="B-tech" readonly>
+        </div>
+
+        <div class="subject-box">
+            <label>Department</label>
+            <input type="text" value="Computer Science" readonly>
+        </div>
+
+        <div class="subject-box">
+            <label>Shift</label>
+            <input type="text" value="Full day/Half day" readonly>
+        </div>
+    </div>
+
+    <h2>Attendance List</h2>
+
+    <table>
+        <tr>
+            <td>B200054CS &nbsp; Disha shrimali</td>
+            <td class="center">Present <input type="checkbox" checked></td>
+            <td class="center">Absent <input type="checkbox"></td>
+            <td class="center">Leave <input type="checkbox"></td>
+        </tr>
+
+        <tr>
+            <td>B200056CS &nbsp; Ankit Sukla</td>
+            <td class="center">Present <input type="checkbox" checked></td>
+            <td class="center">Absent <input type="checkbox"></td>
+            <td class="center">Leave <input type="checkbox"></td>
+        </tr>
+
+        <tr>
+            <td>B200060CS &nbsp; <Search></Search>Sharddha Paliwal</td>
+            <td class="center">Present <input type="checkbox" checked></td>
+            <td class="center">Absent <input type="checkbox"></td>
+            <td class="center">Leave <input type="checkbox"></td>
+        </tr>
+
+        <tr>
+            <td>B200070CS &nbsp; Nikita Sharma</td>
+            <td class="center">Present <input type="checkbox"></td>
+            <td class="center">Absent <input type="checkbox" checked></td>
+            <td class="center">Leave <input type="checkbox"></td>
+        </tr>
+    </table>
+
+    <div class="btn-container">
+        <button class="btn" onclick="submitAttendance()">Take Attendance</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    © 2026 SAMS — faculty Attendance Management System
+</div>
+
+<script>
+    function submitAttendance() {
+        alert("Attendance submitted successfully!");
+    }
+
+    function logout() {
+        alert("Logged out successfully!");
+    }
+</script>
+
+</body>
+</html>

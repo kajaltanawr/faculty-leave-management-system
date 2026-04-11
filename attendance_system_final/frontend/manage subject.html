@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Subjects</title>
+  <link rel="stylesheet" href="manage subject.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <h2>Faculty Attendance Management System</h2>
+      <p>Shree Dadaji Institute Of Technology & Science</p>
+    </div>
+
+    <nav class="menu">
+      <a href="#">HOD</a>
+      <a href="#">Faculty</a>
+      <a href="#">Attendance</a>
+      <button onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section class="container">
+    <div class="top-bar">
+      <h1>All Subjects</h1>
+      <button class="add-btn" onclick="addSubject()">ADD NEW SUBJECT</button>
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Subject Name</th>
+          <th>Subject Code</th>
+          <th>Faculty ID</th>
+          <th>Course</th>
+          <th>Year</th>
+          <th>Branch</th>
+          <th>Sem</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="subjectTable">
+        <!-- JS will insert rows -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="manage subject.js"></script>
+</body>
+</html>

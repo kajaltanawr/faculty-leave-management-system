@@ -1,0 +1,13 @@
+<video id="video" width="400" autoplay></video>
+<button onclick="capture()">Capture</button>
+
+<script>
+navigator.mediaDevices.getUserMedia({ video: true })
+.then(stream => {
+    document.getElementById('video').srcObject = stream;
+});
+
+function capture(){
+    alert("Image Captured (Send to Python Backend)");
+}
+</script>

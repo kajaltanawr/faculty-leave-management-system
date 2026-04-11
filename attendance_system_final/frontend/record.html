@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Records</title>
+  <link rel="stylesheet" href="record.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="left">
+    <span class="logo">📘</span>
+    <div>
+      <h2>Faculty Attendance Management System</h2>
+      <p>Shree Dadaji Institute of Technology & Science</p>
+    </div>
+  </div>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<!-- Main -->
+<main>
+  <h1>Attendance Records</h1>
+
+  <!-- Info Box -->
+  <div class="info-box">
+    <p><strong>Name:</strong> Sharddha Paliwal</p>
+    <p><strong>Id no:</strong> 0823DS1005</p>
+    <p><strong>Subject:</strong> Machine Learning</p>
+    <p><strong>Total Working Days:</strong> 50</p>
+    <p><strong>Date:</strong> 14/10/2022 to 09/12/2022</p>
+  </div>
+
+  <!-- Chart -->
+  <div class="chart-container">
+    <canvas id="attendanceChart"></canvas>
+  </div>
+
+  <!-- Summary -->
+  <div class="summary">
+    <div>Present:45 </div>
+    <div>Absent: 3</div>
+    <div>Leave: 2</div>
+    <div>Attendance (%): 90%</div>
+  </div>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- JS will fill -->
+    </tbody>
+  </table>
+
+</main>
+
+<script src="record.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Management System</title>
+  <link rel="stylesheet" href="Subjeact.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <h2>Attendance Management System</h2>
+      <p>Shree Dadaji Institute Of Technology & Science</p>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="takeAttendance()">Take Attendance</button>
+      <button onclick="viewAttendance()">View Attendance</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <section class="main">
+    <div class="card">
+      <h1>Welcome 👋</h1>
+      <p>Manage faculty attendance easily</p>
+
+      <div class="actions">
+        <button onclick="takeAttendance()">Take Attendance</button>
+        <button onclick="viewAttendance()">View Attendance</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <h2>Attendance Management System</h2>
+      <p>Shree Dadaji Institute Of Technology & Science</p>
+    </div>
+
+    <nav class="menu">
+      <a href="#">HOD</a>
+      <a href="#">Faculty</a>
+      <a href="#">Attendance</a>
+      <button onclick="logout()">Logout</button>
+    </nav>
+  </header> 
+
+  <!-- Main Section -->
+  <section class="main">
+    <h1>Welcome Admin</h1>
+
+    <div class="cards">
+
+      <div class="card" onclick="viewProfessors()">
+        <h3>View HOD</h3>
+        <p>View details of HOD</p>
+        <span>→</span>
+      </div>
+
+      <div class="card" onclick="viewStudents()">
+        <h3>View faculty</h3>
+        <p>View details of faculty</p>
+        <span>→</span>
+      </div>
+
+      <div class="card highlight" onclick="attendance()">
+        <h3>Attendance</h3>
+        <p>View and update Attendance Records</p>
+        <span>→</span>
+      </div>
+
+      <div class="card" onclick="manageSubjects()">
+        <h3>Manage Subjects</h3>
+        <p>Add / Update / Remove Subjects</p>
+        <span>→</span>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

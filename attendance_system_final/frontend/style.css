@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+}
+
+/* Header */
+header {
+  background: #5a6f82;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+/* Container */
+.container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.login-card {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #4c6ef5;
+  color: white;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #4c6ef5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #3b5bdb;
+}
+
+/* Register */
+.register {
+  margin-top: 10px;
+  font-size: 12px;
+}
